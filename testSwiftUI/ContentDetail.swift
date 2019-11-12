@@ -11,27 +11,51 @@ import SwiftUI
 struct ContentDetail: View {
   
   //  var item: TestClass
-  @State private var count = 0
+  @State private var countQty = 0
+  @State private var countAdd = 0
   
   var body: some View {
-    VStack {
-      VStack(alignment: .leading) {
-        Text("NAME")
-          .font(.headline)
-          .lineLimit(1)
-        Image("call-center")
-        .resizable()
-          .frame(width: 300, height: 300.0)
-        Text("Description")
-          .foregroundColor(Color.gray)
-          .lineLimit(3)
-      }.padding(.bottom, 30)
-      HStack{
-        Stepper(value: $count, in: 0...10) {
-          Text("\(count)")
+    NavigationView {
+      VStack {
+        VStack(alignment: .leading) {
+          Image("call-center")
+          .resizable()
+            .frame(width: 300, height: 300.0)
+          Text("Description")
+            .foregroundColor(Color.gray)
+            .lineLimit(3)
+        }.padding(.bottom, 20)
+        HStack(){
+          Text("Quantity")
+          Stepper(value: $countQty, in: 0...10) {
+            Text("\(countQty)")
+          }.padding(.leading, 130)
+        }.padding(.horizontal, 40.0)
+        HStack(){
+          Text("Add more additional")
+          Stepper(value: $countAdd, in: 0...5) {
+            Text("\(countAdd)")
+          }.padding(.leading, 41)
+        }.padding(.horizontal, 40.0)
+        VStack {
+          Text("")
+          TextField("Comments", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            .padding()
+            .background(Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0))
+            .cornerRadius(5.0)
+        }.padding(.horizontal, 40.0)
+        Spacer()
+        Button(action: {}) {
+          Text("Add to cart")
         }
-        
-      }.padding(.horizontal, 40.0)
+        .padding(.trailing, 100)
+        .padding(.leading, 100)
+        .padding(.bottom, 15)
+        .padding(.top, 15)
+        .accentColor(.white)
+        .background(Color.red)
+        .cornerRadius(6.0)
+      }.navigationBarTitle(Text("NAME"))
     }
   }
 }
