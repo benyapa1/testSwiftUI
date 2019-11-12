@@ -7,15 +7,41 @@
 //
 
 import SwiftUI
+import Combine
+
+struct contentCell: View {
+  var item: TestClass!
+  var body: some View {
+    return NavigationLink(destination: Text(item.name)) {
+      Image(uiImage: UIImage(named: "call-center") ?? UIImage())
+        .resizable()
+        .frame(width: 50, height: 50)
+        .cornerRadius(40)
+      VStack(alignment: .leading) {
+        Text(item.name).font(.headline)
+        Text(item.subName)
+          .font(.subheadline)
+          .foregroundColor(Color.gray)
+      }
+    }
+  }
+}
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+  
+  var testList: [TestClass] = []
+  
+  var body: some View {
+    NavigationView {
+      List(testList) { item in
+        contentCell(item: item)
+      }.navigationBarTitle(Text("NAME"))
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView(testList: testData)
+  }
 }
