@@ -35,6 +35,16 @@ struct ContentView: View {
       List(testList) { item in
         ContentCell(item: item)
       }.navigationBarTitle(Text("MENU"))
+        .navigationBarItems(trailing:
+          Button(action: {
+            
+          }, label: {
+            Image("goods")
+              .resizable()
+            .frame(width: 50, height: 50)
+          })
+
+      )
     }
   }
 }

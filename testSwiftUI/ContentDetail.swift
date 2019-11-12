@@ -8,6 +8,21 @@
 
 import SwiftUI
 
+struct ContentSpacer: View {
+  @State private var count = 0
+  var label: String
+  var spacing: CGFloat
+  
+  var body: some View {
+    return HStack {
+      Text("Quantity")
+      Stepper(value: $count, in: 0...10) {
+        Text("\(count)")
+      }.padding(.leading, spacing)
+    }
+  }
+}
+
 struct ContentDetail: View {
   
   //  var item: TestClass
@@ -41,6 +56,8 @@ struct ContentDetail: View {
           Text("")
           TextField("Comments", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
             .padding()
+          .minimumScaleFactor(5)
+          .lineLimit(3)
             .background(Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0))
             .cornerRadius(5.0)
         }.padding(.horizontal, 40.0)
@@ -54,7 +71,7 @@ struct ContentDetail: View {
         .padding(.top, 15)
         .accentColor(.white)
         .background(Color.red)
-        .cornerRadius(6.0)
+        .cornerRadius(50.0)
       }.navigationBarTitle(Text("NAME"))
     }
   }
