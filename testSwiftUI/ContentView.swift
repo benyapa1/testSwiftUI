@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct contentCell: View {
+struct ContentCell: View {
   var item: TestClass!
   var body: some View {
-    return NavigationLink(destination: Text(item.name)) {
+    return NavigationLink(destination: ContentDetail_Previews.previews) {
       Image(uiImage: UIImage(named: "call-center") ?? UIImage())
         .resizable()
-        .frame(width: 50, height: 50)
-        .cornerRadius(40)
+        .frame(width: 100, height: 100)
+        .padding(5)
       VStack(alignment: .leading) {
         Text(item.name).font(.headline)
         Text(item.subName)
@@ -33,8 +33,8 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List(testList) { item in
-        contentCell(item: item)
-      }.navigationBarTitle(Text("NAME"))
+        ContentCell(item: item)
+      }.navigationBarTitle(Text("MENU"))
     }
   }
 }
