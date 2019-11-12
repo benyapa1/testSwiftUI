@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Combine
 
 struct contentCell: View {
   var item: TestClass!
