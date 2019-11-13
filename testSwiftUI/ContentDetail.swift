@@ -25,7 +25,7 @@ struct ContentSpacer: View {
 
 struct ContentDetail: View {
   
-  //  var item: TestClass
+  var item: TestClass
   @State private var countQty = 0
   @State private var countAdd = 0
   
@@ -39,7 +39,8 @@ struct ContentDetail: View {
           .aspectRatio(3/2, contentMode: .fit)
             .padding(.trailing, 20)
             .padding(.leading, 20)
-          Text("Description")
+          Text(item.subName)
+            .padding()
             .foregroundColor(Color.gray)
             .lineLimit(3)
         }.padding(.bottom, 10)
@@ -83,7 +84,7 @@ struct ContentDetail: View {
         .padding(.top, 40)
            .padding(.horizontal, 40.0)
         .background(Color.white)
-      }.navigationBarTitle(Text("NAME"))
+      }.navigationBarTitle(Text(item.name))
       
         .background(Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0))
     }
@@ -92,6 +93,6 @@ struct ContentDetail: View {
 
 struct ContentDetail_Previews: PreviewProvider {
   static var previews: some View {
-    ContentDetail()
+    ContentDetail(item: TestClass(name: "Kapao with egg",imageName: "IMG_3963", subName: "It's amazing!"))
   }
 }

@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ContentCell: View {
-  var item: TestClass!
+  var item: TestClass
   var body: some View {
-    return NavigationLink(destination: ContentDetail()) {
-      Image(uiImage: UIImage(named: "call-center") ?? UIImage())
+    return NavigationLink(destination: ContentDetail(item: item)) {
+      Image(uiImage: UIImage(named: item.imageName) ?? UIImage())
         .resizable()
         .frame(width: 100, height: 100)
         .padding(5)

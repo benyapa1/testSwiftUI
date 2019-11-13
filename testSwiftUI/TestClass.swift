@@ -12,20 +12,20 @@ struct TestClass: Identifiable {
   
   var id = UUID()
   var name: String
-  var ImageURL: String = "https://image.flaticon.com/icons/svg/2240/2240681.svg"
-  var imageData: Data {
-    guard let url = URL.init(string: ImageURL),
-      let data = try? Data(contentsOf: url) else {
-      return Data()
-    }
-    return data
-  }
+  var imageName: String
+//  var imageURL: String = "https://image.flaticon.com/icons/svg/2240/2240681.svg"
+//  var imageData: Data {
+//    guard let url = URL.init(string: imageURL),
+//      let data = try? Data(contentsOf: url) else {
+//      return Data()
+//    }
+//    return data
+//  }
   var subName: String
-
 }
 
 let testData = [
-  TestClass(name: "Pang", subName: "Pang"),
-  TestClass(name: "Papada", subName: "Papada"),
-  TestClass(name: "Preedagorn", subName: "Preedagorn")
+  TestClass(name: "Kapao",imageName: "IMG_3949", subName: "It's delicious!"),
+  TestClass(name: "Kapao with egg",imageName: "IMG_3962", subName: "It's very very good!"),
+  TestClass(name: "Kapao with egg",imageName: "IMG_3963", subName: "It's amazing!")
 ]
