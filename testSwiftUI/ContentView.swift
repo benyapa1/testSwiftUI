@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentCell: View {
   var item: TestClass!
   var body: some View {
-    return NavigationLink(destination: ContentDetail_Previews.previews) {
+    return NavigationLink(destination: ContentDetail()) {
       Image(uiImage: UIImage(named: "call-center") ?? UIImage())
         .resizable()
         .frame(width: 100, height: 100)
