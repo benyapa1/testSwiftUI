@@ -15,6 +15,8 @@ struct ContentCell: View {
       Image(uiImage: UIImage(named: item.imageName) ?? UIImage())
         .resizable()
         .frame(width: 100, height: 100)
+        .cornerRadius(10.0)
+        //        .aspectRatio(1/1,contentMode: .fill)
         .padding(5)
       VStack(alignment: .leading) {
         Text(item.name).font(.headline)
@@ -41,16 +43,37 @@ struct ContentView: View {
           }, label: {
             Image("goods")
               .resizable()
-            .frame(width: 50, height: 50)
+              .frame(width: 50.0, height: 50.0)
+            .shadow(radius: 10)
           })
-
+          
       )
     }
   }
 }
 
+struct ContentTab: View {
+  
+  @State private var state = 1
+  
+  var body: some View {
+    TabView(selection: $state) {
+      ContentView(testList: testData).tabItem { Text("Home") }.tag(1)
+      Text("Haha").tabItem {
+        VStack {
+          Text("User")
+//          Image("call-center")
+//          .resizable()
+//          .frame(width: 50.0, height: 50.0)
+        }
+      }.tag(2)
+    }.accentColor(Color.orange)
+  }
+}
+
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(testList: testData)
+    ContentTab()
+    //    ContentView(testList: testData)
   }
 }

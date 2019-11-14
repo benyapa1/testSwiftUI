@@ -13,6 +13,7 @@ struct TestClass: Identifiable {
   var id = UUID()
   var name: String
   var imageName: String
+  var imageList: [String]
 //  var imageURL: String = "https://image.flaticon.com/icons/svg/2240/2240681.svg"
 //  var imageData: Data {
 //    guard let url = URL.init(string: imageURL),
@@ -24,8 +25,22 @@ struct TestClass: Identifiable {
   var subName: String
 }
 
+let imageList = ["IMG_3949","IMG_3962","IMG_3963"]
+
 let testData = [
-  TestClass(name: "Kapao",imageName: "IMG_3949", subName: "It's delicious!"),
-  TestClass(name: "Kapao with egg",imageName: "IMG_3962", subName: "It's very very good!"),
-  TestClass(name: "Kapao with egg",imageName: "IMG_3963", subName: "It's amazing!")
+  TestClass(
+    name: "Gapao",
+    imageName: "IMG_3949",
+    imageList: imageList,
+    subName: "It's delicious!"),
+  TestClass(
+    name: "Gapao with fried egg",
+    imageName: "IMG_3962",
+    imageList: imageList,
+    subName: "It's very very good!"),
+  TestClass(
+    name: "Gapao with omelet",
+    imageName: "IMG_3963",
+    imageList: imageList,
+    subName: "It's amazing!")
 ]
