@@ -73,7 +73,7 @@ struct ContentTab: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentTab()
-    //    ContentView(testList: testData)
+//    ContentTab()
+        ContentView(testList: testData)
   }
 }
