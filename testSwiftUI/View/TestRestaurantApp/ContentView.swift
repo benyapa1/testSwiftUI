@@ -39,14 +39,12 @@ struct ContentView: View {
       }.navigationBarTitle(Text("MENU"))
         .navigationBarItems(trailing:
           Button(action: {
-            
           }, label: {
             Image("goods")
               .resizable()
               .frame(width: 50.0, height: 50.0)
             .shadow(radius: 10)
           })
-          
       )
     }
   }
@@ -75,5 +73,6 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
 //    ContentTab()
         ContentView(testList: testData)
+          .environment(\.colorScheme, .dark)
   }
 }

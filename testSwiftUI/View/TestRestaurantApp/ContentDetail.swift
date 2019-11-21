@@ -68,6 +68,14 @@ struct ContentDetail: View {
           .aspectRatio(1/1, contentMode: .fit)
           .padding(.trailing, 20)
           .padding(.leading, 20)
+        .contextMenu {
+            Button("Love it: 💕") {
+            }
+            Button("Thoughtful: 🙏") {
+            }
+            Button("Wow!: 🌟") {
+            }
+        }
         Text(item.subName)
           .padding()
           .foregroundColor(Color.gray)
@@ -106,7 +114,7 @@ struct ContentDetail: View {
       }
       .padding(.top, 40)
       .padding(.horizontal, 40.0)
-      .background(Color.white)
+//      .background(Color.white)
     }.navigationBarTitle(Text(item.name))
   }
 }

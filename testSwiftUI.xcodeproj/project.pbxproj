@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0025C1A2384F67E000E0AF5 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0025C192384F67E000E0AF5 /* TestAPI.swift */; };
+		C0025C1C2384F955000E0AF5 /* APIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0025C1B2384F955000E0AF5 /* APIViewModel.swift */; };
+		C0025C1E2385014D000E0AF5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0025C1D2385014D000E0AF5 /* APICaller.swift */; };
 		C086380723796744009C9BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086380623796744009C9BA7 /* AppDelegate.swift */; };
 		C086380923796744009C9BA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086380823796744009C9BA7 /* SceneDelegate.swift */; };
 		C086380B23796744009C9BA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086380A23796744009C9BA7 /* ContentView.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0025C192384F67E000E0AF5 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
+		C0025C1B2384F955000E0AF5 /* APIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewModel.swift; sourceTree = "<group>"; };
+		C0025C1D2385014D000E0AF5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		C086380323796744009C9BA7 /* testSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C086380623796744009C9BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C086380823796744009C9BA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0025C1F2386770F000E0AF5 /* TestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C0025C192384F67E000E0AF5 /* TestAPI.swift */,
+				C0025C1B2384F955000E0AF5 /* APIViewModel.swift */,
+				C0025C1D2385014D000E0AF5 /* APICaller.swift */,
+			);
+			path = TestAPI;
+			sourceTree = "<group>";
+		};
+		C0025C2023867724000E0AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C086383623797089009C9BA7 /* TestClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0025C2123867760000E0AF5 /* TestVerticalList */ = {
+			isa = PBXGroup;
+			children = (
+				C0DF5210237D4C4D00C36DCD /* TestList.swift */,
+			);
+			path = TestVerticalList;
+			sourceTree = "<group>";
+		};
+		C0025C2223867776000E0AF5 /* ImageViewWithPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				C0DF520A237BB5D300C36DCD /* PageViewController.swift */,
+				C0DF520C237BB67B00C36DCD /* PageView.swift */,
+				C0DF520E237BBDF100C36DCD /* PageControl.swift */,
+			);
+			path = ImageViewWithPageControl;
+			sourceTree = "<group>";
+		};
+		C0025C23238677A0000E0AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0025C2223867776000E0AF5 /* ImageViewWithPageControl */,
+				C0025C2123867760000E0AF5 /* TestVerticalList */,
+				C0025C1F2386770F000E0AF5 /* TestAPI */,
+				C0025C25238677DD000E0AF5 /* TestRestaurantApp */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C0025C24238677BB000E0AF5 /* MainDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C086380623796744009C9BA7 /* AppDelegate.swift */,
+				C086380823796744009C9BA7 /* SceneDelegate.swift */,
+			);
+			path = MainDelegate;
+			sourceTree = "<group>";
+		};
+		C0025C25238677DD000E0AF5 /* TestRestaurantApp */ = {
+			isa = PBXGroup;
+			children = (
+				C086383A237A9ED5009C9BA7 /* ContentDetail.swift */,
+				C086380A23796744009C9BA7 /* ContentView.swift */,
+			);
+			path = TestRestaurantApp;
+			sourceTree = "<group>";
+		};
 		C08637FA23796744009C9BA7 = {
 			isa = PBXGroup;
 			children = (
@@ -111,15 +182,9 @@
 		C086380523796744009C9BA7 /* testSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				C086380623796744009C9BA7 /* AppDelegate.swift */,
-				C086380823796744009C9BA7 /* SceneDelegate.swift */,
-				C086383623797089009C9BA7 /* TestClass.swift */,
-				C0DF520A237BB5D300C36DCD /* PageViewController.swift */,
-				C0DF520C237BB67B00C36DCD /* PageView.swift */,
-				C0DF520E237BBDF100C36DCD /* PageControl.swift */,
-				C086383A237A9ED5009C9BA7 /* ContentDetail.swift */,
-				C0DF5210237D4C4D00C36DCD /* TestList.swift */,
-				C086380A23796744009C9BA7 /* ContentView.swift */,
+				C0025C24238677BB000E0AF5 /* MainDelegate */,
+				C0025C2023867724000E0AF5 /* Model */,
+				C0025C23238677A0000E0AF5 /* View */,
 				C086380C23796745009C9BA7 /* Assets.xcassets */,
 				C086381123796745009C9BA7 /* LaunchScreen.storyboard */,
 				C086381423796745009C9BA7 /* Info.plist */,
@@ -289,7 +354,10 @@
 				C086383B237A9ED5009C9BA7 /* ContentDetail.swift in Sources */,
 				C086383723797089009C9BA7 /* TestClass.swift in Sources */,
 				C0DF520F237BBDF100C36DCD /* PageControl.swift in Sources */,
+				C0025C1A2384F67E000E0AF5 /* TestAPI.swift in Sources */,
 				C086380723796744009C9BA7 /* AppDelegate.swift in Sources */,
+				C0025C1C2384F955000E0AF5 /* APIViewModel.swift in Sources */,
+				C0025C1E2385014D000E0AF5 /* APICaller.swift in Sources */,
 				C0DF520B237BB5D300C36DCD /* PageViewController.swift in Sources */,
 				C086380923796744009C9BA7 /* SceneDelegate.swift in Sources */,
 				C086380B23796744009C9BA7 /* ContentView.swift in Sources */,

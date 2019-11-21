@@ -44,3 +44,24 @@ let testData = [
     imageList: imageList,
     subName: "It's amazing!")
 ]
+
+struct Item: Codable, Identifiable {
+  let thumbImageURL: String
+  let brand: String
+  let price: Float
+  let description: String
+  let name: String
+  let rating: Float
+  let id: Int
+  var isFav: Bool = false
+  
+  private enum CodingKeys: String, CodingKey {
+      case thumbImageURL
+      case brand
+      case price
+      case description
+      case name
+      case rating
+      case id
+  }
+}
